@@ -1,0 +1,14 @@
+2025-12-03 11:49:12 [INFO] Database connected successfully
+2025-12-03 11:49:12 [INFO] Scheduler started {"schedule":"0 0 6 * * *","nextRun":"2025-12-03T21:00:00.000Z"}
+2025-12-03 11:49:12 [INFO] RSS fetch scheduler started
+2025-12-03 11:49:12 [INFO] Server running on port 3001
+2025-12-03 11:49:12 [INFO] Environment: development
+2025-12-03 11:49:12 [INFO] AI Provider: openai
+2025-12-03 11:50:23 [INFO] GET / {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:50:24 [INFO] GET /favicon.ico {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:50:28 [INFO] GET /.well-known/appspecific/com.chrome.devtools.json {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:50:51 [INFO] GET / {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:50:51 [INFO] GET /.well-known/appspecific/com.chrome.devtools.json {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:50:51 [INFO] GET /favicon.ico {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:51:08 [INFO] GET /favicon.ico {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2025-12-03 11:57:47 [INFO] SIGINT received, shutting down gracefully
