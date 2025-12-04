@@ -1,17 +1,17 @@
-# 学術論文RSS集約・AI要約システム v2.0
+# AutoSurvey：学術論文RSS集約・要約システム
 
-AIED（AI in Education），認知科学，メタ認知などの学術論文をRSSフィードから自動収集し，AI（Claude/OpenAI）で要約を生成するWebアプリケーションです．
+最新の学術論文を自動収集し，生成AI（Claude/OpenAI）で要約するWebアプリケーション．
 
-## 🚀 主な機能
+## 主な機能
 
 - **RSS自動収集**: 主要論文誌のRSSフィードを定期的に取得
-- **AI要約生成**: Claude / OpenAI APIで論文の構造化要約を生成
+- **要約生成**: Claude / OpenAI APIで論文の構造化要約を生成
 - **論文誌管理**: WebUIから論文誌（RSSフィード）を追加・編集・削除
 - **RSSテスト**: 追加前にRSSフィードの接続確認が可能
 - **ユーザー認証**: セッションベースの認証システム
 - **管理者機能**: 手動フェッチ，ログ閲覧，ユーザー管理
 
-## 📁 ディレクトリ構成
+## ディレクトリ構成
 
 ```
 academic-paper-rss-system/
@@ -62,7 +62,7 @@ academic-paper-rss-system/
 └── logs/                  # ログファイル出力先
 ```
 
-## 🛠 セットアップ
+## セットアップ
 
 ### 1. 依存関係のインストール
 
@@ -121,7 +121,7 @@ npm run db:setup
 node scripts/create-user.js admin your-password --admin
 ```
 
-## 🚀 起動方法
+## 起動方法
 
 ### 開発環境（推奨）
 
@@ -187,7 +187,7 @@ server {
 }
 ```
 
-## 📡 API エンドポイント
+## API エンドポイント
 
 ### 認証
 | メソッド | パス | 説明 |
@@ -225,14 +225,14 @@ server {
 | POST | `/api/admin/scheduler/run` | 全論文誌を即座取得 |
 | GET | `/api/admin/logs` | 取得ログ一覧 |
 
-## 🎨 フロントエンド技術スタック
+## フロントエンド技術スタック
 
 - **Vite** - 高速ビルドツール
 - **React 18** - UIライブラリ
 - **Tailwind CSS** - ユーティリティファーストCSS
 - **Lucide React** - アイコン
 
-## 📰 対応RSS形式
+## 対応RSS形式
 
 ### Springer
 ```
@@ -254,37 +254,6 @@ https://rss.sciencedirect.com/publication/science/[ISSN]
 https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=[JOURNAL_CODE]&type=etoc&feed=rss
 ```
 
-## 🔧 トラブルシューティング
-
-### MySQLストアドプロシージャのエラー
-
-phpMyAdminでインポート時に`DELIMITER`エラーが出る場合:
-
-1. テーブル・ビューのみを先にインポート
-2. ストアドプロシージャは以下のSQLで個別に実行:
-
-```sql
-DROP PROCEDURE IF EXISTS cleanup_expired_sessions;
-CREATE PROCEDURE cleanup_expired_sessions()
-BEGIN
-  DELETE FROM sessions WHERE expires_at < NOW();
-END;
-```
-
-### Viteプロキシが動作しない
-
-`vite.config.js`のプロキシ設定を確認:
-```javascript
-server: {
-  proxy: {
-    '/api': {
-      target: 'http://localhost:3001',  // バックエンドのポート
-      changeOrigin: true,
-    },
-  },
-},
-```
-
-## 📝 ライセンス
+## ライセンス
 
 MIT License
